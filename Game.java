@@ -13,19 +13,20 @@ public class Game {
         int numberToGuess = random.nextInt(10) + 1;
         int attempts = 3;
 
+        ChatUtils.typeWriterEffect(ChatUtils.BLUE + "I have chosen a number between 1 and 10. Try to guess it!" + ChatUtils.RESET, 40);
+
         while (attempts > 0) {
-            System.out.print("CHATBOT: Guess the number (1-10): ");
+            System.out.print(ChatUtils.BLUE + "Guess the number (1-10): " + ChatUtils.RESET);
             int guess = scanner.nextInt();
             scanner.nextLine();
 
             if (guess == numberToGuess) {
-                System.out.println("CHATBOT: Correct!");
+                ChatUtils.typeWriterEffect(ChatUtils.GREEN + "Correct! You guessed it right!" + ChatUtils.RESET, 40);
                 return;
             } else {
-                System.out.println("CHATBOT: Try again! Attempts left: " + (--attempts));
+                ChatUtils.typeWriterEffect(ChatUtils.YELLOW + "Try again! Attempts left: " + (--attempts) + ChatUtils.RESET, 40);
             }
         }
-        System.out.println("CHATBOT: The correct number was " + numberToGuess);
+        ChatUtils.typeWriterEffect(ChatUtils.RED + "You lose! The correct number was " + numberToGuess + "." + ChatUtils.RESET, 40);
     }
 }
-

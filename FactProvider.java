@@ -12,7 +12,7 @@ public class FactProvider {
     };
 
     public void tellFact() {
-        System.out.println("CHATBOT: " + facts[random.nextInt(facts.length)] + "\n");
+        String fact = facts[random.nextInt(facts.length)];
+        ChatUtils.typeWriterEffect(ChatUtils.YELLOW + fact + ChatUtils.RESET, 40);
     }
 }
-

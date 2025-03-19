@@ -13,6 +13,7 @@ public class JokeProvider {
     };
 
     public void tellJoke() {
-        System.out.println("CHATBOT: " + jokes[random.nextInt(jokes.length)] + "\n");
+        String joke = jokes[random.nextInt(jokes.length)];
+        ChatUtils.typeWriterEffect(ChatUtils.YELLOW + joke + ChatUtils.RESET, 40);
     }
 }

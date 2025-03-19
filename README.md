@@ -23,6 +23,22 @@
   - Added **documentation** and structured error messages.
   - Enhanced **user experience** with smoother conversation handling.
 
+- **ChatBot Version 3.1** - 2025-03-19
+  - **Added Colors and Typewriter Effect**: 
+    - Improved chatbot **visual appearance** in the terminal.
+    - Removed pause and changed it to **typewriter effect**.
+  - **Enhanced Calculator Input Handling**: 
+    - Prevents crashes when entering **non-numeric** input.
+    - Ensures **valid menu selection** before proceeding.
+    - Keeps asking for a **valid number** instead of returning an error and going back to menu.
+  - **Fixed User Input Display Issues**: 
+    - Properly formats user responses **without showing raw input**.
+    - Ensures that **color resets correctly** after messages.
+  - **Bug Fixes and Code Optimization**:
+    - **Fixed division by zero** handling in the calculator.
+    - Improved **menu structures** for better readability.
+    - General **code cleanup** and improved efficiency.
+
 ---------------------------------------------------------------------------------------------------------------------
 
 ## **ChatBot Features**
@@ -61,6 +77,8 @@ After greeting the user, the chatbot presents a **main menu** with six options:
 - The chatbot can perform **addition, subtraction, multiplication, and division**.
 - The user enters **two numbers**, and the chatbot calculates the result.
 - If the user attempts to **divide by zero**, an appropriate error message is displayed.
+- **Menu selection validation**: Prevents invalid choices before asking for numbers.
+- **Handles non-numeric input**: Keeps asking until the user provides a valid number.
 
 #### **6. Exit the Program**
 - The chatbot **says goodbye** to the user and exits.
@@ -72,9 +90,10 @@ After greeting the user, the chatbot presents a **main menu** with six options:
 - The chatbot detects **invalid user input** and provides appropriate error messages.
 - If an exception occurs, the chatbot handles it without crashing.
 
-### **✔ Pause Before Next Interaction**
-- The chatbot introduces a **short delay** (1 second) between interactions for a smoother conversation flow.
-- This makes conversations **feel more natural** rather than immediate responses.
+### **✔ Improved Visual Experience**
+- **Added colors and structured formatting** for better readability.
+- **Typewriter effect** makes responses **appear more natural and engaging**.
+- **Corrected color resets** to prevent formatting issues.
 
 ### **✔ Waiting for User Key Press**
 - Before continuing to the next step, the chatbot waits for the **user to press ENTER**.
